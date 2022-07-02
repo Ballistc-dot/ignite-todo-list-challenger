@@ -14,6 +14,7 @@ This project is a to-do app, you can create, delete and mark task as completed
 - [redux](https://redux.js.org/)
 - [redux-persist](https://github.com/rt2zz/redux-persist)
 - [framer-motion](https://www.framer.com/motion/)
+- [Tailwind css](https://tailwindcss.com)
 
 ## Installation
 

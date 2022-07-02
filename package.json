@@ -1,0 +1,40 @@
+{
+    "name": "ignite-todo-list-challenger",
+    "private": true,
+    "version": "0.0.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@reduxjs/toolkit": "^1.8.3",
+        "@tailwindcss/forms": "^0.5.2",
+        "framer-motion": "^6.3.16",
+        "phosphor-react": "^1.4.1",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "react-redux": "^8.0.2",
+        "redux": "^4.2.0",
+        "redux-persist": "^6.0.0",
+        "uuid": "^8.3.2",
+        "uuidv4": "^6.2.13"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.0",
+        "@types/react-dom": "^18.0.0",
+        "@types/uuid": "^8.3.4",
+        "@typescript-eslint/eslint-plugin": "^5.30.0",
+        "@typescript-eslint/parser": "^5.30.0",
+        "@vitejs/plugin-react": "^1.3.0",
+        "autoprefixer": "^10.4.7",
+        "eslint": "^8.18.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-react": "^7.30.1",
+        "postcss": "^8.4.14",
+        "prettier": "2.7.1",
+        "tailwindcss": "^3.1.4",
+        "typescript": "^4.6.3",
+        "vite": "^2.9.9"
+    }
+}

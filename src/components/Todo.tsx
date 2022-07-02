@@ -1,26 +1,31 @@
 import { useState } from "react"
 import { Trash } from "phosphor-react"
 import { motion } from "framer-motion"
+import { useSelector } from "react-redux"
 interface TodoProps {
   content: string
   id: string
   onDelete(id: string): void
   onChecked(id: string, checkedState: boolean): void
 }
-const item = {
-  visible: { opacity: 1 },
-  hidden: { opacity: 0 },
-}
 
+interface Todos {
+  content: string
+  id: string
+  isCompleted: boolean
+}
 export function Todo({ onDelete, content, onChecked, id }: TodoProps) {
-  const [isChecked, setIsChecked] = useState(false)
-  const [animate, setAnimate] = useState(true)
+  const todos: Todos[] | undefined = useSelector((state: any) => state.todo)
+
+  const storageTodo = todos?.filter((todo: Todos) => todo?.id === id)
+
+  const [isChecked, setIsChecked] = useState(storageTodo![0].isCompleted)
+
   function handleCheck() {
     setIsChecked(!isChecked)
     onChecked(id, !isChecked)
   }
   function handleDelete() {
-    setAnimate(true)
     onDelete(id)
   }
   const animations = {

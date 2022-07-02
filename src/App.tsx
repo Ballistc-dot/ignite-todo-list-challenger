@@ -62,7 +62,6 @@ function App() {
               <ul className="flex flex-1 flex-col gap-3 h-auto">
                 <AnimatePresence>
                   {todos?.map((todo) => {
-                    console.log(todo)
                     return (
                       <Todo
                         key={todo.id}

@@ -13,7 +13,6 @@ export const userSlice = createSlice({
   initialState: { todo: initialState },
   reducers: {
     addTodo: (state: any, action: any) => {
-      console.log(action)
       state.todo.push(action.payload)
     },
     removeTodo(state: any, action: any) {
@@ -22,7 +21,6 @@ export const userSlice = createSlice({
       )
     },
     changeTodoCompletedState(state: any, action: any) {
-      console.log(action.payload)
       state.todo = state.todo.map((todo: TodoInitialState) => {
         if (todo.id == action.payload.id) {
           todo.isCompleted = action.payload.checkedState

@@ -2,7 +2,7 @@
 
 ## Ignite challenger
 
-![todo image](https://raw.githubusercontent.com/Ballistc-dot/ignite-todo-list-challenger/master/ezgif.com-gif-maker.gif)
+<img  src="https://raw.githubusercontent.com/Ballistc-dot/ignite-todo-list-challenger/master/ezgif.com-gif-maker.gif"  alt="drawing" />
 
 ## About ✔
 

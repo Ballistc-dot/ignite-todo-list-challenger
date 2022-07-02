@@ -19,7 +19,9 @@ export function Todo({ onDelete, content, onChecked, id }: TodoProps) {
 
   const storageTodo = todos?.filter((todo: Todos) => todo?.id === id)
 
-  const [isChecked, setIsChecked] = useState(storageTodo![0].isCompleted)
+  const [isChecked, setIsChecked] = useState(
+    storageTodo && storageTodo![0].isCompleted
+  )
 
   function handleCheck() {
     setIsChecked(!isChecked)

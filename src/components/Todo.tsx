@@ -19,7 +19,7 @@ export function Todo({ onDelete, content, onChecked, id }: TodoProps) {
 
   const storageTodo = todos?.filter((todo: Todos) => todo?.id === id)
 
-  if (!storageTodo[0]) return
+  if (!storageTodo[0]) return null
 
   function handleCheck() {
     onChecked(id, !storageTodo[0].isCompleted)

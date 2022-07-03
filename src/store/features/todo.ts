@@ -13,7 +13,7 @@ export const userSlice = createSlice({
   initialState: { todo: initialState },
   reducers: {
     addTodo: (state: any, action: any) => {
-      state.todo.push(action.payload)
+      state.todo = [action.payload, ...state.todo]
     },
     removeTodo(state: any, action: any) {
       state.todo = state.todo.filter(

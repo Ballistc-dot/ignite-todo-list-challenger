@@ -14,6 +14,16 @@ interface Todos {
   id: string
   isCompleted: boolean
 }
+const animations = {
+  layout: true,
+  initial: {
+    scale: 0,
+    opacity: 0,
+  },
+  animate: { scale: 1, opacity: 1 },
+  exit: { scale: 0, opacity: 0 },
+  trasition: { stiffness: 200, damping: 80 },
+}
 export function Todo({ onDelete, content, onChecked, id }: TodoProps) {
   const todos: Todos[] = useSelector((state: any) => state.todo)
 
@@ -26,16 +36,6 @@ export function Todo({ onDelete, content, onChecked, id }: TodoProps) {
   }
   function handleDelete() {
     onDelete(id)
-  }
-  const animations = {
-    layout: true,
-    initial: {
-      scale: 1,
-      opacity: 0,
-    },
-    animate: { scale: 1, opacity: 1 },
-    exit: { scale: 0, opacity: 0, delay: 0.2 },
-    trasition: { stiffness: 200, damping: 40, delay: 0.2 },
   }
   const storageCompleted = storageTodo[0].isCompleted
   return (

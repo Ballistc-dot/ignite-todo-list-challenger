@@ -8,9 +8,11 @@ interface TodoInitialState {
 
 let initialState: TodoInitialState[] = []
 
-export const userSlice = createSlice({
+export const todoSlice = createSlice({
   name: "todos",
-  initialState: { todo: initialState },
+  initialState: {
+    todo: initialState,
+  },
   reducers: {
     addTodo: (state: any, action: any) => {
       state.todo = [action.payload, ...state.todo]
@@ -32,5 +34,5 @@ export const userSlice = createSlice({
 })
 
 export const { addTodo, removeTodo, changeTodoCompletedState } =
-  userSlice.actions
-export default userSlice.reducer
+  todoSlice.actions
+export default todoSlice.reducer

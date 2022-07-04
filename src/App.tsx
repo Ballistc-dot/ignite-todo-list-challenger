@@ -34,9 +34,14 @@ function App() {
     dispatch(removeTodo(id))
   }
 
-  const finishedTodos =
-    todos?.filter((todo) => todo?.isCompleted == true).length ?? 0
+  const finishedTodos = todos?.filter(
+    (todo) => todo?.isCompleted == true
+  ).length
 
+  const test = todos?.slice().sort((a, b) => {
+    return a.isCompleted === b.isCompleted ? 0 : a.isCompleted ? 1 : -1
+  })
+  console.log(test)
   return (
     <div>
       <Header />
@@ -61,7 +66,7 @@ function App() {
             {todos && todos?.length > 0 ? (
               <ul className="flex flex-1 flex-col gap-3 h-auto">
                 <AnimatePresence>
-                  {todos?.map((todo) => {
+                  {test?.map((todo) => {
                     return (
                       <Todo
                         key={todo.id}
